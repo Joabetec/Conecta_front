@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>APP Conecta</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f2f2f2;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .box {
+      display: none;
+      background: #fff;
+      padding: 15px;
+      margin: auto;
+      max-width: 300px;
+      border: 1px solid #ccc;
+    }
+
+    .show {
+      display: block;
+    }
+
+    a {
+      display: block;
+      margin: 10px;
+      padding: 10px;
+      background: #ddd;
+      text-decoration: none;
+      color: black;
+    }
+
+    input, button {
+      width: 100%;
+      margin: 5px 0;
+      padding: 8px;
+    }
+
+    button {
+      background: #4CAF50;
+      color: white;
+      border: none;
+    }
+
+    /* Mostrar a tela baseada no ID alvo */
+    #escolha:target ~ #escolhaBox,
+    #demandante:target ~ #demandanteBox,
+    #trabalhador:target ~ #trabalhadorBox {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- IDs de navegação -->
+  <div id="escolha"></div>
+  <div id="demandante"></div>
+  <div id="trabalhador"></div>
+
+  <!-- Tela de escolha -->
+  <div id="escolhaBox" class="box show">
+    <h2>APP Conecta</h2>
+    <p>Você é:</p>
+    <a href="#demandante">Demandante</a>
+    <a href="#trabalhador">Trabalhador</a>
+  </div>
+
+  <!-- Login Demandante -->
+  <div id="demandanteBox" class="box">
+    <h3>Login - Demandante</h3>
+    <form>
+      <input type="email" placeholder="Email">
+      <input type="password" placeholder="Senha">
+      <input type="text" placeholder="CPF">
+      <button type="submit">Entrar</button>
+    </form>
+    <a href="#escolha">← Voltar</a>
+  </div>
+
+  <!-- Login Trabalhador -->
+  <div id="trabalhadorBox" class="box">
+    <h3>Login - Trabalhador</h3>
+    <form>
+      <input type="email" placeholder="Email">
+      <input type="password" placeholder="Senha">
+      <input type="text" placeholder="Área de atuação">
+      <button type="submit">Entrar</button>
+    </form>
+    <a href="#escolha">← Voltar</a>
+  </div>
+
+</body>
+</html>
